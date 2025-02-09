@@ -1,4 +1,4 @@
-import video from "../assets/hero.mp4"
+
 import logo from "../assets/logo.png"
 import hero from "../assets/hero.jpeg"
 import { motion } from "framer-motion"
@@ -6,7 +6,16 @@ function HeroSection() {
   return (
     <section className="relative flex h-screen item-center justify-center">
         <div className="absolute inset-0 -z-20 h-full w-full overflow-hidden">
-            <video src={video} className="h-full w-full object-cover" muted autoPlay loop playsInline poster={hero}></video>
+        <video
+  src="/hero.mp4" // Remove the import and use a direct path
+  className="h-full w-full object-cover"
+  muted
+  autoPlay
+  loop
+  playsInline
+  poster={hero} // Poster can still be imported normally
+></video>
+
         </div>
         <div className="absolute inset-0 -z-10 
         bg-gradiant-to-b from-transparent from-70% to-black"></div>
